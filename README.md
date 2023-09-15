@@ -1,3 +1,3 @@
-# npm-package-template
+# cube-3d
 
-Minimum configuration template for publishing packages to npm.
+Provides a 3D cube carousel display with perspective.
