@@ -2,4 +2,6 @@
 export type Config = {
   width?: number; // Optional width property.
   height?: number; // Optional height property.
+  initialRotation?: number; // Optional initial rotate deg property.
+  intensity?: number; // Optional intensity property.
 };
