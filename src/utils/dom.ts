@@ -38,3 +38,36 @@ export const generateBaseElement = (
 
   return baseElement;
 };
+
+/**
+ * Retrieve and style face elements within a target element.
+ * @param {HTMLElement} targetElement - The target element containing face elements.
+ * @param {number} width - The width used for transformations.
+ * @returns {NodeListOf<HTMLDivElement>} - A NodeList of styled face elements.
+ */
+export const getFaceElements = (
+  targetElement: HTMLElement,
+  width: number,
+): NodeListOf<HTMLDivElement> => {
+  // Retrieve all div elements within the target element
+  const faceElements = targetElement.querySelectorAll("div");
+
+  // Apply common styles to all face elements
+  faceElements.forEach((element) => {
+    element.style.position = "absolute";
+    element.style.width = "100%";
+    element.style.height = "100%";
+  });
+
+  // Apply specific transformations to each face element
+  faceElements[0].style.transform = `translateZ(${width / 2}px)`;
+  faceElements[1].style.transform = `translateX(${width / 2}px) rotateY(90deg)`;
+  faceElements[2].style.transform = `translateZ(-${
+    width / 2
+  }px) rotateY(180deg)`;
+  faceElements[3].style.transform = `translateX(-${
+    width / 2
+  }px) rotateY(-90deg)`;
+
+  return faceElements;
+};

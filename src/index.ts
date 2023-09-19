@@ -3,7 +3,11 @@ import {
   DEFAULT_TARGET_ID,
   DEFAULT_WIDTH,
 } from "./utils/constants";
-import { generateBaseElement, getTargetElement } from "./utils/dom";
+import {
+  generateBaseElement,
+  getFaceElements,
+  getTargetElement,
+} from "./utils/dom";
 import { Config } from "./utils/types";
 
 /**
@@ -25,6 +29,14 @@ export const init = (
 
   // Generate a base HTML div element
   const baseElement = generateBaseElement(width, height);
+
+  // Retrieve and style face elements within a target element
+  const faceElements = getFaceElements(targetElement, width);
+
+  // Append each face element to the base element
+  faceElements.forEach((faceElement) => {
+    baseElement.appendChild(faceElement);
+  });
 
   // Append the base element to the target element
   targetElement.appendChild(baseElement);
