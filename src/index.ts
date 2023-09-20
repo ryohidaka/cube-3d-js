@@ -1,6 +1,7 @@
 import {
   DEFAULT_HEIGHT,
   DEFAULT_INTENSITY,
+  DEFAULT_SCROLL_INTENSITY,
   DEFAULT_TARGET_ID,
   DEFAULT_WIDTH,
 } from "./utils/constants";
@@ -9,7 +10,7 @@ import {
   getFaceElements,
   getTargetElement,
 } from "./utils/dom";
-import { setDraggable } from "./utils/draggable";
+import { setDraggableAndScrollable } from "./utils/draggable";
 import { Config } from "./utils/types";
 
 /**
@@ -24,6 +25,7 @@ export const init = (
     height = DEFAULT_HEIGHT,
     initialRotation = 0,
     intensity = DEFAULT_INTENSITY,
+    scrollIntensity = DEFAULT_SCROLL_INTENSITY,
   }: Config = {},
 ) => {
   // Get the target element
@@ -49,5 +51,10 @@ export const init = (
   targetElement.appendChild(baseElement);
 
   // Enable draggable behavior for the base element
-  setDraggable(baseElement, initialRotation, intensity);
+  setDraggableAndScrollable(
+    baseElement,
+    initialRotation,
+    intensity,
+    scrollIntensity,
+  );
 };

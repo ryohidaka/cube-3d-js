@@ -4,4 +4,5 @@ export type Config = {
   height?: number; // Optional height property.
   initialRotation?: number; // Optional initial rotate deg property.
   intensity?: number; // Optional intensity property.
+  scrollIntensity?: number; // Optional intensity property for scroll .
 };
