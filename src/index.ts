@@ -11,7 +11,10 @@ import {
   getTargetElement,
 } from "./utils/dom";
 import { setDraggableAndScrollable } from "./utils/draggable";
+import { observeRotateYChanges } from "./utils/observer";
 import { Config } from "./utils/types";
+
+let baseElement: HTMLDivElement;
 
 /**
  * Initializes the application with optional configuration parameters.
@@ -37,7 +40,7 @@ export const init = (
   }
 
   // Generate a base HTML div element
-  const baseElement = generateBaseElement(width, height);
+  baseElement = generateBaseElement(width, height);
 
   // Retrieve and style face elements within a target element
   const faceElements = getFaceElements(targetElement, width);
@@ -57,4 +60,16 @@ export const init = (
     intensity,
     scrollIntensity,
   );
+};
+
+/**
+ * Registers a callback function to be executed when the rotation changes.
+ *
+ * @param callback - A function to call when the rotation changes with the detected face index.
+ */
+export const onRotate = (callback: (index: number) => void) => {
+  // Observe changes in rotation and call the provided callback
+  observeRotateYChanges(baseElement, (index) => {
+    callback(index);
+  });
 };
