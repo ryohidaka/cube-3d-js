@@ -13,7 +13,7 @@ function addDraggableBehavior(
   let startX: number, endX: number, windowWidth: number;
   let currentDeg = initialDeg;
 
-  element.style.transform = `rotateY(${currentDeg}deg)`;
+  setRotationDegree(element, currentDeg);
 
   element.addEventListener("mousedown", (e) => {
     isDragging = true;
@@ -38,7 +38,7 @@ function addDraggableBehavior(
       }
       currentDeg = newDeg;
 
-      element.style.transform = `rotateY(${newDeg}deg)`;
+      setRotationDegree(element, newDeg);
     }
   }
 
@@ -71,7 +71,7 @@ function addScrollableBehavior(
     }
     currentDeg = newDeg;
 
-    element.style.transform = `rotateY(${newDeg}deg)`;
+    setRotationDegree(element, newDeg);
   });
 }
 
@@ -90,4 +90,13 @@ export function setDraggableAndScrollable(
 ) {
   addDraggableBehavior(element, initialDeg, intensity);
   addScrollableBehavior(element, initialDeg, scrollIntensity);
+}
+
+/**
+ * Set the rotation degree for a given element.
+ * @param {HTMLElement} element - The element to set the rotation degree for.
+ * @param {number} deg - The rotation degree to set.
+ */
+function setRotationDegree(element: HTMLElement, deg: number) {
+  element.style.transform = `rotateY(${deg}deg)`;
 }
