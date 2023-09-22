@@ -73,3 +73,14 @@ export const onRotate = (callback: (index: number) => void) => {
     callback(index);
   });
 };
+
+/**
+ * Retrieves a specific face element by its index.
+ *
+ * @param index - The index of the face element to retrieve.
+ * @returns The element corresponding to the specified index.
+ */
+export const getFaceByIndex = (index: number): HTMLElement => {
+  // Get the child element corresponding to the provided index
+  return baseElement.children[index - 1] as HTMLElement;
+};
