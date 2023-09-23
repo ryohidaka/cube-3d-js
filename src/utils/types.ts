@@ -5,4 +5,5 @@ export type Config = {
   initialRotation?: number; // Optional initial rotate deg property.
   intensity?: number; // Optional intensity property.
   scrollIntensity?: number; // Optional intensity property for scroll .
+  swipeIntensity?: number; // Optional intensity property for swipe .
 };

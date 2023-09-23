@@ -2,6 +2,7 @@ import {
   DEFAULT_HEIGHT,
   DEFAULT_INTENSITY,
   DEFAULT_SCROLL_INTENSITY,
+  DEFAULT_SWIPE_INTENSITY,
   DEFAULT_TARGET_ID,
   DEFAULT_WIDTH,
 } from "./utils/constants";
@@ -30,6 +31,7 @@ export const init = (
     initialRotation = 0,
     intensity = DEFAULT_INTENSITY,
     scrollIntensity = DEFAULT_SCROLL_INTENSITY,
+    swipeIntensity = DEFAULT_SWIPE_INTENSITY,
   }: Config = {},
 ) => {
   // Get the target element
@@ -55,7 +57,13 @@ export const init = (
   targetElement.appendChild(baseElement);
 
   // Enable draggable behavior for the base element
-  setRotate(baseElement, initialRotation, intensity, scrollIntensity);
+  setRotate(
+    baseElement,
+    initialRotation,
+    intensity,
+    scrollIntensity,
+    swipeIntensity,
+  );
 };
 
 /**
