@@ -1,3 +1,5 @@
+import { Cube3DError } from "./error";
+
 /**
  * Get the target element by its ID.
  * @param {string} targetId - The ID of the target element.
@@ -61,7 +63,9 @@ export const getFaceElements = (
 
   // Check if there are at least 1 face element
   if (faceElements.length === 0) {
-    console.error("At least one face element is required for transformations.");
+    throw new Cube3DError(
+      "At least one face element is required for transformations.",
+    );
   } else {
     // Define the transformations for each face element
     const transformations = [
