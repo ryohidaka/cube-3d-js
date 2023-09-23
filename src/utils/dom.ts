@@ -59,15 +59,25 @@ export const getFaceElements = (
     element.style.height = "100%";
   });
 
-  // Apply specific transformations to each face element
-  faceElements[0].style.transform = `translateZ(${width / 2}px)`;
-  faceElements[1].style.transform = `translateX(${width / 2}px) rotateY(90deg)`;
-  faceElements[2].style.transform = `translateZ(-${
-    width / 2
-  }px) rotateY(180deg)`;
-  faceElements[3].style.transform = `translateX(-${
-    width / 2
-  }px) rotateY(-90deg)`;
+  // Check if there are at least 1 face element
+  if (faceElements.length === 0) {
+    console.error("At least one face element is required for transformations.");
+  } else {
+    // Define the transformations for each face element
+    const transformations = [
+      `translateZ(${width / 2}px)`,
+      `translateX(${width / 2}px) rotateY(90deg)`,
+      `translateZ(-${width / 2}px) rotateY(180deg)`,
+      `translateX(-${width / 2}px) rotateY(-90deg)`,
+    ];
+
+    // Apply transformations to each face element
+    faceElements.forEach((element, index) => {
+      if (element) {
+        element.style.transform = transformations[index];
+      }
+    });
+  }
 
   return faceElements;
 };
