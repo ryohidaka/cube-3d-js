@@ -5,14 +5,14 @@ import { addSwipeBehavior } from "./swipe";
 /**
  * Enable draggable and scrollable behavior for a given element.
  * @param {HTMLElement} element - The element to make draggable and scrollable.
- * @param {number} initialDeg - The initial rotation degree (default is 30).
+ * @param {number} initialDeg - The initial rotation degree.
  * @param {number} intensity - The intensity of the dragging effect.
  * @param {number} scrollIntensity - The intensity of the scrolling effect.
  * @param {number} swipeIntensity - The intensity of the swiping effect.
  */
 export function setRotate(
   element: HTMLElement,
-  initialDeg = 30,
+  initialDeg: number,
   intensity: number,
   scrollIntensity: number,
   swipeIntensity: number,

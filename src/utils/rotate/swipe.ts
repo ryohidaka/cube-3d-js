@@ -3,7 +3,7 @@ import { setRotationDegree } from ".";
 /**
  * Enable swipe behavior for a given element.
  * @param {HTMLElement} element - The element to make swipeable.
- * @param {number} initialDeg - The initial rotation degree (default is 30).
+ * @param {number} initialDeg - The initial rotation degree.
  * @param {number} swipeIntensity - The sensitivity of the swipe effect.
  */
 export const addSwipeBehavior = (

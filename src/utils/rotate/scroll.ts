@@ -3,12 +3,12 @@ import { setRotationDegree } from ".";
 /**
  * Enable scrollable behavior for a given element.
  * @param {HTMLElement} element - The element to make scrollable.
- * @param {number} initialDeg - The initial rotation degree (default is 30).
+ * @param {number} initialDeg - The initial rotation degree.
  * @param {number} scrollIntensity - The intensity of the scrolling effect.
  */
 export const addScrollableBehavior = (
   element: HTMLElement,
-  initialDeg = 30,
+  initialDeg: number,
   scrollIntensity: number,
 ) => {
   let currentDeg = initialDeg;

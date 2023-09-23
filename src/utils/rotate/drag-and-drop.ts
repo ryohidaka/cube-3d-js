@@ -3,12 +3,12 @@ import { setRotationDegree } from ".";
 /**
  * Enable draggable behavior for a given element.
  * @param {HTMLElement} element - The element to make draggable.
- * @param {number} initialDeg - The initial rotation degree (default is 30).
+ * @param {number} initialDeg - The initial rotation degree.
  * @param {number} intensity - The intensity of the dragging effect.
  */
 export const addDraggableBehavior = (
   element: HTMLElement,
-  initialDeg = 30,
+  initialDeg: number,
   intensity: number,
 ) => {
   let isDragging = false;
