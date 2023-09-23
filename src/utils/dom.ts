@@ -19,17 +19,20 @@ export const getTargetElement = (targetId: string) => {
 };
 
 /**
- * Generate a base HTML div element with specified width and height.
+ * Generate a base HTML div element with specified width, height, and ID.
  * @param {number} width - The width of the div element.
  * @param {number} height - The height of the div element.
+ * @param {string} baseId - The ID to set for the div element.
  * @returns {HTMLDivElement} The created div element.
  */
 export const generateBaseElement = (
   width: number,
   height: number,
-): HTMLDivElement => {
-  // Create a new div element
+  baseId: string,
+) => {
+  // Create a new div element with an ID
   const baseElement = document.createElement("div");
+  baseElement.setAttribute("id", baseId);
 
   // Apply 3D transformation style
   baseElement.style.transformStyle = "preserve-3d";

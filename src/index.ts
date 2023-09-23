@@ -1,4 +1,5 @@
 import {
+  DEFAULT_BASE_ID,
   DEFAULT_HEIGHT,
   DEFAULT_INTENSITY,
   DEFAULT_SCROLL_INTENSITY,
@@ -28,6 +29,7 @@ export const init = (
   {
     width = DEFAULT_WIDTH,
     height = DEFAULT_HEIGHT,
+    baseId = DEFAULT_BASE_ID,
     initialRotation = 0,
     intensity = DEFAULT_INTENSITY,
     scrollIntensity = DEFAULT_SCROLL_INTENSITY,
@@ -43,7 +45,7 @@ export const init = (
   }
 
   // Generate a base HTML div element
-  baseElement = generateBaseElement(width, height);
+  baseElement = generateBaseElement(width, height, baseId);
 
   // Retrieve and style face elements within a target element
   const faceElements = getFaceElements(targetElement, width);

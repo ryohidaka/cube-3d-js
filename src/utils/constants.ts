@@ -1,5 +1,6 @@
 // Default target ID, usually referring to a 3D cube.
 export const DEFAULT_TARGET_ID = "cube-3d";
+export const DEFAULT_BASE_ID = "cube-3d-base";
 
 // Default width and height, the typical canvas dimensions.
 export const DEFAULT_WIDTH = 500;
