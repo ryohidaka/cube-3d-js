@@ -2,6 +2,11 @@
   "name": "cube-3d-js",
   "version": "1.0.0",
   "description": "Provides a 3D cube carousel display with perspective.",
+  "keywords": [
+    "cube",
+    "carousel",
+    "3D"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
