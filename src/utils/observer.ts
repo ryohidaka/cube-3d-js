@@ -1,13 +1,13 @@
 /**
  * Observes changes in the rotation around the Y-axis (rotateY) of an HTMLDivElement.
- * Calls the provided callback with the detected face index when a change is detected.
+ * Calls the provided callback with the detected face index and the previous face index when a change is detected.
  *
  * @param baseElement - The HTMLDivElement to observe for rotation changes.
  * @param callback - A function to call when a change in face index is detected.
  */
 export const observeRotateYChanges = (
   baseElement: HTMLDivElement,
-  callback: (index: number) => void,
+  callback: (currentFaceIndex: number, previousFaceIndex: number) => void,
 ) => {
   let lastFaceIndex: number;
 
@@ -22,10 +22,11 @@ export const observeRotateYChanges = (
         const rotateYValue = extractRotateYFromMatrix3D(currentTransformValue);
         const faceIndex = detectFaceIndexByRotateValue(rotateYValue);
 
-        // Check if the face index has changed and call the callback if it has
+        // Check if the face index has changed and call the callback with both current and previous indices
         if (faceIndex !== lastFaceIndex) {
+          const previousIndex = lastFaceIndex;
           lastFaceIndex = faceIndex;
-          callback(faceIndex);
+          callback(faceIndex, previousIndex);
         }
       }
     });

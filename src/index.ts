@@ -65,12 +65,14 @@ export const init = (
 /**
  * Registers a callback function to be executed when the rotation changes.
  *
- * @param callback - A function to call when the rotation changes with the detected face index.
+ * @param callback - A function to call when the rotation changes with the detected face index and the previous face index.
  */
-export const onRotate = (callback: (index: number) => void) => {
-  // Observe changes in rotation and call the provided callback
-  observeRotateYChanges(baseElement, (index) => {
-    callback(index);
+export const onRotate = (
+  callback: (currentFaceIndex: number, previousFaceIndex: number) => void,
+) => {
+  // Observe changes in rotation and call the provided callback with both current and previous face indices
+  observeRotateYChanges(baseElement, (currentFaceIndex, previousFaceIndex) => {
+    callback(currentFaceIndex, previousFaceIndex);
   });
 };
 
