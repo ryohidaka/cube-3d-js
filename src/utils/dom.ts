@@ -1,21 +1,21 @@
 import { Cube3DError } from "./error";
 
 /**
- * Get the target element by its ID.
+ * Get the target element by its ID and apply CSS styles.
  * @param {string} targetId - The ID of the target element.
- * @returns {HTMLElement | undefined} The target element or undefined if not found.
+ * @returns {HTMLElement} The target element.
+ * @throws {Error} If the element with the specified ID is not found.
  */
-export const getTargetElement = (targetId: string): HTMLElement | undefined => {
-  const targetElement = document.getElementById(targetId) as HTMLElement;
+export const getTargetElement = (targetId: string) => {
+  const targetElement = document.getElementById(targetId);
 
-  if (targetElement) {
-    targetElement.style.overflow = "hidden";
-    targetElement.style.userSelect = "none";
-    return targetElement;
-  } else {
-    console.log(`Element with ID ${targetId} not found.`);
-    return undefined;
+  if (!targetElement) {
+    throw new Error(`Element with ID ${targetId} not found.`);
   }
+
+  targetElement.style.overflow = "hidden";
+  targetElement.style.userSelect = "none";
+  return targetElement;
 };
 
 /**
