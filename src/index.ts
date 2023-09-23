@@ -10,8 +10,9 @@ import {
   getFaceElements,
   getTargetElement,
 } from "./utils/dom";
-import { setDraggableAndScrollable } from "./utils/draggable";
+
 import { observeRotateYChanges } from "./utils/observer";
+import { setRotate } from "./utils/rotate";
 import { Config } from "./utils/types";
 
 let baseElement: HTMLDivElement;
@@ -54,12 +55,7 @@ export const init = (
   targetElement.appendChild(baseElement);
 
   // Enable draggable behavior for the base element
-  setDraggableAndScrollable(
-    baseElement,
-    initialRotation,
-    intensity,
-    scrollIntensity,
-  );
+  setRotate(baseElement, initialRotation, intensity, scrollIntensity);
 };
 
 /**
