@@ -1,6 +1,6 @@
-# cube-3d
+# cube-3d-js
 
-[![npm version](https://badge.fury.io/js/cube-3d.svg)](https://badge.fury.io/js/cube-3d)
+[![npm version](https://badge.fury.io/js/cube-3d-js.svg)](https://badge.fury.io/js/cube-3d)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Provides a 3D cube carousel display with perspective.
@@ -10,7 +10,7 @@ Provides a 3D cube carousel display with perspective.
 You can install this library using npm:
 
 ```shell
-npm install cube-3d
+npm install cube-3d-js
 ```
 
 ## Usage

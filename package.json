@@ -1,5 +1,5 @@
 {
-  "name": "cube-3d",
+  "name": "cube-3d-js",
   "version": "1.0.0",
   "description": "Provides a 3D cube carousel display with perspective.",
   "main": "dist/index.js",
