@@ -15,3 +15,6 @@ jest.config.js
 
 #Git hooks
 .husky/
+
+## GitHub
+.github
