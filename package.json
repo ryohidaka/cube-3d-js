@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryohidaka/cube-3d.git"
+    "url": "git+https://github.com/ryohidaka/cube-3d-js.git"
   },
   "author": "ryohidaka",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ryohidaka/cube-3d/issues"
+    "url": "https://github.com/ryohidaka/cube-3d-js/issues"
   },
-  "homepage": "https://github.com/ryohidaka/cube-3d#readme",
+  "homepage": "https://github.com/ryohidaka/cube-3d-js#readme",
   "devDependencies": {
     "@types/jest": "^29.5.4",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
