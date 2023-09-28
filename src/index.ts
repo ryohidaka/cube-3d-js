@@ -15,14 +15,14 @@ import {
 
 import { observeRotateYChanges } from "./utils/observer";
 import { setRotate } from "./utils/rotate";
-import { Config } from "./utils/types";
+import { Cube3DConfig } from "./utils/types";
 
 let baseElement: HTMLDivElement;
 
 /**
  * Initializes the application with optional configuration parameters.
  * @param {string} targetId - The ID of the target element (default is DEFAULT_TARGET_ID).
- * @param {Config} config - Optional configuration object for width, height, initialRotation, and intensity.
+ * @param {Cube3DConfig} config - Optional configuration object for width, height, initialRotation, and intensity.
  */
 export const init = (
   targetId: string = DEFAULT_TARGET_ID,
@@ -34,7 +34,7 @@ export const init = (
     intensity = DEFAULT_INTENSITY,
     scrollIntensity = DEFAULT_SCROLL_INTENSITY,
     swipeIntensity = DEFAULT_SWIPE_INTENSITY,
-  }: Config = {},
+  }: Cube3DConfig = {},
 ) => {
   // Get the target element
   const targetElement = getTargetElement(targetId);
