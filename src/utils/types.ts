@@ -1,5 +1,5 @@
 // Define a configuration type for specifying width and height options.
-export type Config = {
+export type Cube3DConfig = {
   width?: number; // Optional width property.
   height?: number; // Optional height property.
   baseId?: string; // Optional base ID property.

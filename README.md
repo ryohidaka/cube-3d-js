@@ -59,7 +59,7 @@ const faceElement = getFaceByIndex(1);
 
 ## API Documentation
 
-### `init(targetId: string, config?: Config)`
+### `init(targetId: string, config?: Cube3DConfig)`
 
 Initializes the application with optional configuration parameters.
 
