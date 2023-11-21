@@ -1,16 +1,14 @@
 name: Bump Patch Version
 on:
   workflow_run:
-    workflows:
-      - dependabot-auto-merge
-    branches:
-      - main
+    workflows: [Dependabot auto-merge]
     types:
       - completed
 
 jobs:
-  bump-patch-version:
+  on-success:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v3
 
