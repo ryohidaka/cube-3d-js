@@ -3,6 +3,8 @@
 [![npm version](https://badge.fury.io/js/cube-3d-js.svg)](https://badge.fury.io/js/cube-3d)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B6TVH92)
+
 Provides a 3D cube carousel display with perspective.
 
 ## Installation
