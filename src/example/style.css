@@ -1,0 +1,6 @@
+#cube-3d-base > div {
+  box-sizing: border-box;
+  border: 0.5px solid black;
+  color: blue;
+  background-color: rgb(255 255 255 / 0.5);
+}
