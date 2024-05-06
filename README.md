@@ -50,9 +50,11 @@ init("cube-3d", {
 });
 
 // Register a callback for when the rotation changes
-onRotate((currentFaceIndex, previousFaceIndex) => {
+onRotate((currentFaceIndex: number, previousFaceIndex: number) => {
   // Your callback logic here
-  console.log(`Face index changed from: ${previousIndex} to: ${index}`);
+  console.log(
+    `Face index changed from: ${previousFaceIndex} to: ${currentFaceIndex}`,
+  );
 });
 
 // Retrieve a specific face element by index
