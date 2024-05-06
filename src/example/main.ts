@@ -4,18 +4,16 @@ import { init, onRotate, getFaceByIndex } from "../";
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <div id="cube-3d">
-    <div><h1>1</h1></div>
-    <div><h1>2</h1></div>
-    <div><h1>3</h1></div>
-  </div>
-  <style>
-    #cube-3d-base > div {
-      box-sizing: border-box;
-      border: 0.5px solid black;
-      color: blue;
-      background-color: rgb(255 255 255 / 0.5);
-    }
-  </style>
+      <div data-cube-face>
+        <img src="https://picsum.photos/800" />
+      </div>
+      <div data-cube-face>
+        <img src="https://picsum.photos/800" />
+      </div>
+      <div data-cube-face>
+        <img src="https://picsum.photos/800" />
+      </div>
+    </div>
   </div>
 `;
 
@@ -24,6 +22,7 @@ init("cube-3d", {
   width: 500,
   height: 500,
   initialRotation: 0,
+  swipeIntensity: 5,
 });
 
 // Register a callback for when the rotation changes

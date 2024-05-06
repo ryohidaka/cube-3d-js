@@ -54,8 +54,10 @@ export const getFaceElements = (
   targetElement: HTMLElement,
   width: number,
 ): NodeListOf<HTMLDivElement> => {
-  // Retrieve all div elements within the target element
-  const faceElements = targetElement.querySelectorAll("div");
+  // Retrieve all elements with the attribute "data-cube-face" within the target element
+  const faceElements = targetElement.querySelectorAll(
+    "[data-cube-face]",
+  ) as NodeListOf<HTMLElement>;
 
   // Apply common styles to all face elements
   faceElements.forEach((element) => {
