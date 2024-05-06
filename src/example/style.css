@@ -3,4 +3,11 @@
   border: 0.5px solid black;
   color: blue;
   background-color: rgb(255 255 255 / 0.5);
+  overflow: hidden;
+}
+
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
 }
