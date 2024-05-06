@@ -3,8 +3,9 @@
 tsconfig.json
 
 ## Tests
-jest.config.js
+setup.ts
 /tests
+/coverage
 
 ## Prettier
 .prettierignore
@@ -18,3 +19,8 @@ jest.config.js
 
 ## GitHub
 .github
+
+## Vite
+vite.config.ts
+public
+index.html
