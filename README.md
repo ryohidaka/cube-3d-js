@@ -1,6 +1,7 @@
 # cube-3d-js
 
-[![npm version](https://badge.fury.io/js/cube-3d-js.svg)](https://badge.fury.io/js/cube-3d)
+[![NPM Version](https://img.shields.io/npm/v/cube-3d-js?logo=npm)](https://www.npmjs.com/package/cube-3d-js)
+![build](https://github.com/ryohidaka/cube-3d-js/workflows/Build/badge.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B6TVH92)
@@ -53,7 +54,7 @@ init("cube-3d", {
 onRotate((currentFaceIndex: number, previousFaceIndex: number) => {
   // Your callback logic here
   console.log(
-    `Face index changed from: ${previousFaceIndex} to: ${currentFaceIndex}`,
+    `Face index changed from: ${previousFaceIndex} to: ${currentFaceIndex}`
   );
 });
 
