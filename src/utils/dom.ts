@@ -48,12 +48,12 @@ export const generateBaseElement = (
  * Retrieve and style face elements within a target element.
  * @param {HTMLElement} targetElement - The target element containing face elements.
  * @param {number} width - The width used for transformations.
- * @returns {NodeListOf<HTMLDivElement>} - A NodeList of styled face elements.
+ * @returns {NodeListOf<HTMLElement>} - A NodeList of styled face elements.
  */
 export const getFaceElements = (
   targetElement: HTMLElement,
   width: number,
-): NodeListOf<HTMLDivElement> => {
+): NodeListOf<HTMLElement> => {
   // Retrieve all elements with the attribute "data-cube-face" within the target element
   const faceElements = targetElement.querySelectorAll(
     "[data-cube-face]",
